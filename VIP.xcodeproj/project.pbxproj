@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23EB6EFFE0B25113CEEE12F2 /* Pods_VIPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FF53759F1CF4006877DC6A /* Pods_VIPTests.framework */; };
 		94ACB64124FE6D2000D842F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ACB64024FE6D2000D842F9 /* AppDelegate.swift */; };
 		94ACB64324FE6D2000D842F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ACB64224FE6D2000D842F9 /* SceneDelegate.swift */; };
 		94ACB64524FE6D2000D842F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ACB64424FE6D2000D842F9 /* ViewController.swift */; };
@@ -14,6 +15,13 @@
 		94ACB64A24FE6D2200D842F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94ACB64924FE6D2200D842F9 /* Assets.xcassets */; };
 		94ACB64D24FE6D2200D842F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94ACB64B24FE6D2200D842F9 /* LaunchScreen.storyboard */; };
 		94ACB65824FE6D2200D842F9 /* VIPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ACB65724FE6D2200D842F9 /* VIPTests.swift */; };
+		94ACB66924FE6E0E00D842F9 /* TodoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ACB66324FE6E0E00D842F9 /* TodoListPresenter.swift */; };
+		94ACB66A24FE6E0E00D842F9 /* TodoListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ACB66424FE6E0E00D842F9 /* TodoListWorker.swift */; };
+		94ACB66B24FE6E0E00D842F9 /* TodoListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ACB66524FE6E0E00D842F9 /* TodoListRouter.swift */; };
+		94ACB66C24FE6E0E00D842F9 /* TodoListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ACB66624FE6E0E00D842F9 /* TodoListModels.swift */; };
+		94ACB66D24FE6E0E00D842F9 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ACB66724FE6E0E00D842F9 /* TodoListViewController.swift */; };
+		94ACB66E24FE6E0E00D842F9 /* TodoListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ACB66824FE6E0E00D842F9 /* TodoListInteractor.swift */; };
+		CE162DC6F640936A733CEB5B /* Pods_VIP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25777C3101B6C116FBEB0475 /* Pods_VIP.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C8302DA697703F0F115450A /* Pods-VIPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPTests.release.xcconfig"; path = "Target Support Files/Pods-VIPTests/Pods-VIPTests.release.xcconfig"; sourceTree = "<group>"; };
+		25777C3101B6C116FBEB0475 /* Pods_VIP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EF0A42DD684FA234A243E0B /* Pods-VIP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIP.debug.xcconfig"; path = "Target Support Files/Pods-VIP/Pods-VIP.debug.xcconfig"; sourceTree = "<group>"; };
+		42FF53759F1CF4006877DC6A /* Pods_VIPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94ACB63D24FE6D2000D842F9 /* VIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VIP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94ACB64024FE6D2000D842F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94ACB64224FE6D2000D842F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +50,14 @@
 		94ACB65324FE6D2200D842F9 /* VIPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VIPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94ACB65724FE6D2200D842F9 /* VIPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPTests.swift; sourceTree = "<group>"; };
 		94ACB65924FE6D2300D842F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94ACB66324FE6E0E00D842F9 /* TodoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListPresenter.swift; sourceTree = "<group>"; };
+		94ACB66424FE6E0E00D842F9 /* TodoListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListWorker.swift; sourceTree = "<group>"; };
+		94ACB66524FE6E0E00D842F9 /* TodoListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListRouter.swift; sourceTree = "<group>"; };
+		94ACB66624FE6E0E00D842F9 /* TodoListModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListModels.swift; sourceTree = "<group>"; };
+		94ACB66724FE6E0E00D842F9 /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
+		94ACB66824FE6E0E00D842F9 /* TodoListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListInteractor.swift; sourceTree = "<group>"; };
+		C385144C3EDBF3F5CB418836 /* Pods-VIP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIP.release.xcconfig"; path = "Target Support Files/Pods-VIP/Pods-VIP.release.xcconfig"; sourceTree = "<group>"; };
+		E597B4DB52FDC9886C51858A /* Pods-VIPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPTests.debug.xcconfig"; path = "Target Support Files/Pods-VIPTests/Pods-VIPTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE162DC6F640936A733CEB5B /* Pods_VIP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +73,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23EB6EFFE0B25113CEEE12F2 /* Pods_VIPTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E6691B54AF220EB6690DE9B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25777C3101B6C116FBEB0475 /* Pods_VIP.framework */,
+				42FF53759F1CF4006877DC6A /* Pods_VIPTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		94ACB63424FE6D2000D842F9 = {
 			isa = PBXGroup;
 			children = (
 				94ACB63F24FE6D2000D842F9 /* VIP */,
 				94ACB65624FE6D2200D842F9 /* VIPTests */,
 				94ACB63E24FE6D2000D842F9 /* Products */,
+				FDCD2E0FE96874FA21777D42 /* Pods */,
+				8E6691B54AF220EB6690DE9B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +112,7 @@
 		94ACB63F24FE6D2000D842F9 /* VIP */ = {
 			isa = PBXGroup;
 			children = (
+				94ACB66224FE6DDE00D842F9 /* TodoList */,
 				94ACB64024FE6D2000D842F9 /* AppDelegate.swift */,
 				94ACB64224FE6D2000D842F9 /* SceneDelegate.swift */,
 				94ACB64424FE6D2000D842F9 /* ViewController.swift */,
@@ -99,6 +133,31 @@
 			path = VIPTests;
 			sourceTree = "<group>";
 		};
+		94ACB66224FE6DDE00D842F9 /* TodoList */ = {
+			isa = PBXGroup;
+			children = (
+				94ACB66324FE6E0E00D842F9 /* TodoListPresenter.swift */,
+				94ACB66424FE6E0E00D842F9 /* TodoListWorker.swift */,
+				94ACB66524FE6E0E00D842F9 /* TodoListRouter.swift */,
+				94ACB66624FE6E0E00D842F9 /* TodoListModels.swift */,
+				94ACB66724FE6E0E00D842F9 /* TodoListViewController.swift */,
+				94ACB66824FE6E0E00D842F9 /* TodoListInteractor.swift */,
+			);
+			path = TodoList;
+			sourceTree = "<group>";
+		};
+		FDCD2E0FE96874FA21777D42 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3EF0A42DD684FA234A243E0B /* Pods-VIP.debug.xcconfig */,
+				C385144C3EDBF3F5CB418836 /* Pods-VIP.release.xcconfig */,
+				E597B4DB52FDC9886C51858A /* Pods-VIPTests.debug.xcconfig */,
+				1C8302DA697703F0F115450A /* Pods-VIPTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +165,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94ACB65C24FE6D2300D842F9 /* Build configuration list for PBXNativeTarget "VIP" */;
 			buildPhases = (
+				5A97882F93BFA7232DDB8D95 /* [CP] Check Pods Manifest.lock */,
 				94ACB63924FE6D2000D842F9 /* Sources */,
 				94ACB63A24FE6D2000D842F9 /* Frameworks */,
 				94ACB63B24FE6D2000D842F9 /* Resources */,
+				0883C3311C1AA9A2F72CFE4A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +184,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94ACB65F24FE6D2300D842F9 /* Build configuration list for PBXNativeTarget "VIPTests" */;
 			buildPhases = (
+				B897B5912B1AE5DFD3DA627F /* [CP] Check Pods Manifest.lock */,
 				94ACB64F24FE6D2200D842F9 /* Sources */,
 				94ACB65024FE6D2200D842F9 /* Frameworks */,
 				94ACB65124FE6D2200D842F9 /* Resources */,
@@ -195,14 +257,84 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0883C3311C1AA9A2F72CFE4A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VIP/Pods-VIP-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VIP/Pods-VIP-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VIP/Pods-VIP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A97882F93BFA7232DDB8D95 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VIP-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B897B5912B1AE5DFD3DA627F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VIPTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		94ACB63924FE6D2000D842F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94ACB66D24FE6E0E00D842F9 /* TodoListViewController.swift in Sources */,
+				94ACB66B24FE6E0E00D842F9 /* TodoListRouter.swift in Sources */,
+				94ACB66924FE6E0E00D842F9 /* TodoListPresenter.swift in Sources */,
 				94ACB64524FE6D2000D842F9 /* ViewController.swift in Sources */,
 				94ACB64124FE6D2000D842F9 /* AppDelegate.swift in Sources */,
+				94ACB66A24FE6E0E00D842F9 /* TodoListWorker.swift in Sources */,
 				94ACB64324FE6D2000D842F9 /* SceneDelegate.swift in Sources */,
+				94ACB66E24FE6E0E00D842F9 /* TodoListInteractor.swift in Sources */,
+				94ACB66C24FE6E0E00D842F9 /* TodoListModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +492,7 @@
 		};
 		94ACB65D24FE6D2300D842F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EF0A42DD684FA234A243E0B /* Pods-VIP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -378,6 +511,7 @@
 		};
 		94ACB65E24FE6D2300D842F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C385144C3EDBF3F5CB418836 /* Pods-VIP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,6 +530,7 @@
 		};
 		94ACB66024FE6D2300D842F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E597B4DB52FDC9886C51858A /* Pods-VIPTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -418,6 +553,7 @@
 		};
 		94ACB66124FE6D2300D842F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C8302DA697703F0F115450A /* Pods-VIPTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
