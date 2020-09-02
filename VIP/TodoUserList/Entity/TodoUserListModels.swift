@@ -1,5 +1,5 @@
 //
-//  TodoListModels.swift
+//  TodoUserListModels.swift
 //  VIP
 //
 //  Created by Mohamed El-Taweel on 9/1/20.
@@ -12,7 +12,7 @@
 
 import UIKit
 
-enum TodoList
+enum TodoUserList
 {
   // MARK: Use cases
   

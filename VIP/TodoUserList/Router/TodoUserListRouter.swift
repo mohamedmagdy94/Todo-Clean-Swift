@@ -1,5 +1,5 @@
 //
-//  TodoListRouter.swift
+//  TodoUserListRouter.swift
 //  VIP
 //
 //  Created by Mohamed El-Taweel on 9/1/20.
@@ -12,20 +12,20 @@
 
 import UIKit
 
-@objc protocol TodoListRoutingLogic
+@objc protocol TodoUserListRoutingLogic
 {
   //func routeToSomewhere(segue: UIStoryboardSegue?)
 }
 
-protocol TodoListDataPassing
+protocol TodoUserListDataPassing
 {
-  var dataStore: TodoListDataStore? { get }
+  var dataStore: TodoUserListDataStore? { get }
 }
 
-class TodoListRouter: NSObject, TodoListRoutingLogic, TodoListDataPassing
+class TodoUserListRouter: NSObject, TodoUserListRoutingLogic, TodoUserListDataPassing
 {
-  weak var viewController: TodoListViewController?
-  var dataStore: TodoListDataStore?
+  weak var viewController: TodoUserListViewController?
+  var dataStore: TodoUserListDataStore?
   
   // MARK: Routing
   
@@ -46,14 +46,14 @@ class TodoListRouter: NSObject, TodoListRoutingLogic, TodoListDataPassing
 
   // MARK: Navigation
   
-  //func navigateToSomewhere(source: TodoListViewController, destination: SomewhereViewController)
+  //func navigateToSomewhere(source: TodoUserListViewController, destination: SomewhereViewController)
   //{
   //  source.show(destination, sender: nil)
   //}
   
   // MARK: Passing data
   
-  //func passDataToSomewhere(source: TodoListDataStore, destination: inout SomewhereDataStore)
+  //func passDataToSomewhere(source: TodoUserListDataStore, destination: inout SomewhereDataStore)
   //{
   //  destination.name = source.name
   //}

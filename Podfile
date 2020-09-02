@@ -7,6 +7,7 @@ target 'VIP' do
 
   # Pods for VIP
   pod 'Moya/RxSwift'
+  pod "KRProgressHUD"
 
 
   target 'VIPTests' do
