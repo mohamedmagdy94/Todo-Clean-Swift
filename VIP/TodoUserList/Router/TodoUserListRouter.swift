@@ -17,7 +17,7 @@ import UIKit
     func routeToUserTodos()
 }
 
-protocol TodoUserListDataPassing: UserTodoListDataStore
+protocol TodoUserListDataPassing
 {
     var dataStore: TodoUserListDataStore? { get }
 }
@@ -26,10 +26,7 @@ class TodoUserListRouter: NSObject, TodoUserListRoutingLogic, TodoUserListDataPa
 {
     weak var viewController: TodoUserListViewController?
     var dataStore: TodoUserListDataStore?
-    var user: User?{ get{
-        return dataStore?.selectedUser
-        }set{}
-    }
+    
     
     func routeToUserTodos() {
         let storyboard = UIStoryboard(name: "UserTodoList", bundle: nil)
