@@ -14,7 +14,7 @@ struct GetAPIUserListWorker: TodoUserListWorking{
     var provider: MoyaProvider<TodoUserListMoyaProvider>
     
     init() {
-        self.provider = MoyaProvider<TodoUserListMoyaProvider>()
+        self.provider = MoyaProvider<TodoUserListMoyaProvider>(plugins: [NetworkLoggerPlugin(verbose: true)])
     }
     
     func getUserList(onSuccess: @escaping (UserListResponse) -> (), onFailure: @escaping (TodoUserListError) -> ()) {

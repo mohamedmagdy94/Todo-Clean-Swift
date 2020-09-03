@@ -14,47 +14,28 @@ import UIKit
 
 @objc protocol TodoUserListRoutingLogic
 {
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
+    func routeToUserTodos()
 }
 
-protocol TodoUserListDataPassing
+protocol TodoUserListDataPassing: UserTodoListDataStore
 {
-  var dataStore: TodoUserListDataStore? { get }
+    var dataStore: TodoUserListDataStore? { get }
 }
 
 class TodoUserListRouter: NSObject, TodoUserListRoutingLogic, TodoUserListDataPassing
 {
-  weak var viewController: TodoUserListViewController?
-  var dataStore: TodoUserListDataStore?
-  
-  // MARK: Routing
-  
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
-  //{
-  //  if let segue = segue {
-  //    let destinationVC = segue.destination as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //  } else {
-  //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-  //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-  //  }
-  //}
-
-  // MARK: Navigation
-  
-  //func navigateToSomewhere(source: TodoUserListViewController, destination: SomewhereViewController)
-  //{
-  //  source.show(destination, sender: nil)
-  //}
-  
-  // MARK: Passing data
-  
-  //func passDataToSomewhere(source: TodoUserListDataStore, destination: inout SomewhereDataStore)
-  //{
-  //  destination.name = source.name
-  //}
+    weak var viewController: TodoUserListViewController?
+    var dataStore: TodoUserListDataStore?
+    var user: User?{ get{
+        return dataStore?.selectedUser
+        }set{}
+    }
+    
+    func routeToUserTodos() {
+        let storyboard = UIStoryboard(name: "UserTodoList", bundle: nil)
+        let destinationVC = storyboard.instantiateViewController(withIdentifier: "UserTodoListViewController") as! UserTodoListViewController
+        destinationVC.router?.dataStore?.user = self.dataStore?.selectedUser
+        viewController?.navigationController?.pushViewController(destinationVC, animated: true)
+    }
 }
+

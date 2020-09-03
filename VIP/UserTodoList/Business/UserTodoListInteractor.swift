@@ -14,28 +14,26 @@ import UIKit
 
 protocol UserTodoListBusinessLogic
 {
-  func doSomething(request: UserTodoList.Something.Request)
+  func getUserTodos()
 }
 
 protocol UserTodoListDataStore
 {
-  //var name: String { get set }
+  var user: User? { get set }
 }
 
 class UserTodoListInteractor: UserTodoListBusinessLogic, UserTodoListDataStore
 {
   var presenter: UserTodoListPresentationLogic?
-  var worker: UserTodoListWorker?
-  //var name: String = ""
+  var worker: UserTodoListWorking?
+  var user: User?
   
-  // MARK: Do something
-  
-  func doSomething(request: UserTodoList.Something.Request)
-  {
-    worker = UserTodoListWorker()
-    worker?.doSomeWork()
-    
-    let response = UserTodoList.Something.Response()
-    presenter?.presentSomething(response: response)
-  }
+    func getUserTodos() {
+        presenter?.presentLoading()
+        worker?.getUserTodoList(userID: "\(user?.id ?? 0)", onSuccess: {[weak self] (response) in
+            self?.presenter?.presentUserTodos(with: response)
+        }, onFailure: {[weak self] (error) in
+            self?.presenter?.presentError(with: error)
+        })
+    }
 }

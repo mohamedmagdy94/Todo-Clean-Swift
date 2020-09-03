@@ -14,8 +14,10 @@ import UIKit
 
 protocol TodoUserListPresentationLogic
 {
+    func presentLoading()
     func presentTodoUsers(with users: UserListResponse)
     func presentError(with error: TodoUserListError)
+    func presentUserTodos()
 }
 
 class TodoUserListPresenter: TodoUserListPresentationLogic
@@ -24,6 +26,10 @@ class TodoUserListPresenter: TodoUserListPresentationLogic
   
   // MARK: Do something
   
+    func presentLoading() {
+        viewController?.showLoading()
+    }
+    
     func presentError(with error: TodoUserListError) {
         viewController?.showError(with: error.localizedDescription)
     }
@@ -33,4 +39,9 @@ class TodoUserListPresenter: TodoUserListPresentationLogic
     let viewModels = users.map{ TodoUserTableCellViewModel(name: $0.name) }
     viewController?.showUsers(with: viewModels)
   }
+    
+    func presentUserTodos() {
+        self.viewController?.showUserTodos()
+    }
+    
 }

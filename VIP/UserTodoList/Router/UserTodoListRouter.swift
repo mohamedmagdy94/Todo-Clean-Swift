@@ -19,7 +19,7 @@ import UIKit
 
 protocol UserTodoListDataPassing
 {
-  var dataStore: UserTodoListDataStore? { get }
+  var dataStore: UserTodoListDataStore? { get set } 
 }
 
 class UserTodoListRouter: NSObject, UserTodoListRoutingLogic, UserTodoListDataPassing

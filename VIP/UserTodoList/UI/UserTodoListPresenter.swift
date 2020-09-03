@@ -14,18 +14,28 @@ import UIKit
 
 protocol UserTodoListPresentationLogic
 {
-  func presentSomething(response: UserTodoList.Something.Response)
+    func presentLoading()
+    func presentError(with error: UserTodoListError)
+    func presentUserTodos(with todos: UserTodoListResponse)
+    
 }
 
 class UserTodoListPresenter: UserTodoListPresentationLogic
 {
-  weak var viewController: UserTodoListDisplayLogic?
-  
-  // MARK: Do something
-  
-  func presentSomething(response: UserTodoList.Something.Response)
-  {
-    let viewModel = UserTodoList.Something.ViewModel()
-    viewController?.displaySomething(viewModel: viewModel)
-  }
+    
+    weak var viewController: UserTodoListDisplayLogic?
+    
+    func presentLoading() {
+        viewController?.showLoading()
+    }
+    
+    func presentError(with error: UserTodoListError) {
+        viewController?.showError(with: error.localizedDescription)
+    }
+    
+    func presentUserTodos(with todos: UserTodoListResponse) {
+        let viewModels = todos.map{ UserTodoCellViewModel(title: $0.title, body: $0.body) }
+        viewController?.showTodos(with: viewModels)
+    }
+    
 }

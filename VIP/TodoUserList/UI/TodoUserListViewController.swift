@@ -14,9 +14,10 @@ import UIKit
 import KRProgressHUD
 
 protocol TodoUserListViewable: class {
+    func showLoading()
     func showError(with message: String)
     func showUsers(with viewModels: [TodoUserTableCellViewModel])
-    
+    func showUserTodos()
 }
 
 
@@ -29,15 +30,25 @@ class TodoUserListViewController: UIViewController
     var router: (NSObjectProtocol & TodoUserListRoutingLogic & TodoUserListDataPassing)?
     var todoUsersTableViewModels = [TodoUserTableCellViewModel]()
     
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
+    {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder)
+    {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        setup()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        KRProgressHUD.show()
         interactor?.getTodoUsers()
     }
     
@@ -61,6 +72,11 @@ class TodoUserListViewController: UIViewController
 
 
 extension TodoUserListViewController: TodoUserListViewable{
+    
+    func showLoading() {
+        KRProgressHUD.show()
+    }
+    
     func showError(with message: String) {
         KRProgressHUD.dismiss()
         KRProgressHUD.showError(withMessage: message)
@@ -72,8 +88,10 @@ extension TodoUserListViewController: TodoUserListViewable{
         KRProgressHUD.dismiss()
     }
     
+    func showUserTodos() {
+        self.router?.routeToUserTodos()
+    }
     
-
 }
 
 extension TodoUserListViewController: UITableViewDelegate,UITableViewDataSource{

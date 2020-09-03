@@ -28,7 +28,7 @@ typealias TodoUserListInteractoring = TodoUserListBusinessLogic & TodoUserListDa
 
 class TodoUserListInteractor: TodoUserListInteractoring
 {
-var usersResponse: UserListResponse?
+  var usersResponse: UserListResponse?
   var selectedUser: User?
   var presenter: TodoUserListPresentationLogic?
   var worker: TodoUserListWorking?
@@ -38,10 +38,10 @@ var usersResponse: UserListResponse?
   
   func getTodoUsers()
   {
-    
+    presenter?.presentLoading()
     worker?.getUserList(onSuccess: {[weak self] (users) in
         guard let weakSelf = self else{ return }
-        weakSelf.usersResponse? = users
+        weakSelf.usersResponse = users
         weakSelf.presenter?.presentTodoUsers(with: users)
     }, onFailure: {[weak self] (error) in
         guard let weakSelf = self else{ return }
@@ -52,6 +52,7 @@ var usersResponse: UserListResponse?
     func getTodoUser(from index: Int) {
         guard let users = self.usersResponse else{ return }
         self.selectedUser = users[index]
+        self.presenter?.presentUserTodos()
     }
     
    
